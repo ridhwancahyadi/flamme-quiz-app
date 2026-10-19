@@ -1,0 +1,8 @@
+# log server lokal
+server.log
+
+# screenshot lokal
+screenshots/
+
+# OS
+.DS_Store
