@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Kuis AI - 10 Soal Pilihan Ganda</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main class="shell">
+
+  <!-- ====== HEADER ====== -->
+  <header class="topbar">
+    <div class="brand">
+      <span class="dot"></span>
+      <span>Kuis Dasar AI</span>
+    </div>
+    <div class="topbar-right">
+      <span id="counter" class="counter">Soal 1 dari 10</span>
+      <button id="themeBtn" class="icon-btn" type="button" aria-label="Ganti tema">◐</button>
+    </div>
+  </header>
+
+  <div class="progress-track">
+    <div id="progressBar" class="progress-fill"></div>
+  </div>
+
+  <!-- ====== SCREEN 1: QUIZ ====== -->
+  <section id="quizScreen" class="card">
+    <p id="qTag" class="q-tag">Soal 1</p>
+    <h1 id="qText" class="q-text">Memuat soal...</h1>
+    <div id="options" class="options"></div>
+    <p id="hint" class="hint">Pilih satu jawaban untuk lanjut.</p>
+
+    <div class="actions">
+      <button id="prevBtn" class="btn btn-ghost" type="button">Sebelumnya</button>
+      <button id="nextBtn" class="btn btn-primary" type="button" disabled>Next</button>
+    </div>
+  </section>
+
+  <!-- ====== SCREEN 2: RESULT ====== -->
+  <section id="resultScreen" class="card hidden">
+    <p class="q-tag">Hasil</p>
+    <h1 class="q-text">Skor kamu</h1>
+
+    <div class="bento">
+      <div class="tile tile-hero">
+        <span id="scoreBig" class="score-big">0</span>
+        <span class="score-of">/ 10</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label">Benar</span>
+        <span id="statCorrect" class="tile-value ok">0</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label">Salah</span>
+        <span id="statWrong" class="tile-value bad">0</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label">Persentase</span>
+        <span id="statPct" class="tile-value">0%</span>
+      </div>
+      <div class="tile">
+        <span class="tile-label">Predikat</span>
+        <span id="statGrade" class="tile-value">-</span>
+      </div>
+    </div>
+
+    <p id="scoreMsg" class="score-msg"></p>
+
+    <h2 class="review-title">Pembahasan</h2>
+    <div id="review" class="review"></div>
+
+    <div class="actions">
+      <button id="retryBtn" class="btn btn-primary" type="button">Ulangi Kuis</button>
+    </div>
+  </section>
+
+</main>
+
+<script src="app.js"></script>
+</body>
+</html>
